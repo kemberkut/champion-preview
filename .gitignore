@@ -1,8 +1,8 @@
 .DS_Store
 references/
-assets/
-styles/
-design-system/
-instructions/
+/assets/
+/styles/
+/design-system/
+/instructions/
 font-test.html
 blocks/*.zip
