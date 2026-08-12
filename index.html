@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111111">
+  <title>Чемпион LED — превью блоков</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: #fff;
+      background: #111;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .preview-nav {
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      display: flex;
+      gap: 8px;
+      padding: 9px max(12px, env(safe-area-inset-left));
+      overflow-x: auto;
+      background: rgba(17, 17, 17, .92);
+      backdrop-filter: blur(12px);
+      scrollbar-width: none;
+    }
+    .preview-nav::-webkit-scrollbar { display: none; }
+    .preview-nav a {
+      flex: 0 0 auto;
+      padding: 7px 10px;
+      border: 1px solid #555;
+      border-radius: 999px;
+      color: #fff;
+      font-size: 11px;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .preview-block {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #fff;
+    }
+    .preview-block iframe {
+      display: block;
+      width: 100%;
+      height: 600px;
+      border: 0;
+      background: #fff;
+    }
+    .preview-status {
+      padding: 32px 16px;
+      color: #aaa;
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="preview-nav" aria-label="Навигация по блокам">
+    <a href="#hero">Hero</a>
+    <a href="#brand-intro">Brand intro</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#catalog-cta">Catalog CTA</a>
+    <a href="#consultation-cta">Consultation CTA</a>
+    <a href="#client-benefits">Client benefits</a>
+    <a href="#consultation-popup">CTA + popup</a>
+  </nav>
+
+  <main>
+    <section class="preview-block" id="hero"><iframe src="blocks/hero/index.html" title="Hero" loading="eager"></iframe></section>
+    <section class="preview-block" id="brand-intro"><iframe src="blocks/brand-intro/index.html" title="Brand intro" loading="eager"></iframe></section>
+    <section class="preview-block" id="benefits"><iframe src="blocks/benefits/index.html" title="Benefits" loading="lazy"></iframe></section>
+    <section class="preview-block" id="catalog-cta"><iframe src="blocks/catalog-cta/index.html" title="Catalog CTA" loading="lazy"></iframe></section>
+    <section class="preview-block" id="consultation-cta"><iframe src="blocks/consultation-cta/index.html" title="Consultation CTA" loading="lazy"></iframe></section>
+    <section class="preview-block" id="client-benefits"><iframe src="blocks/client-mounting-benefits/index.html" title="Client mounting benefits" loading="lazy"></iframe></section>
+    <section class="preview-block" id="consultation-popup"><iframe src="blocks/consultation-cta-popup/index.html" title="Consultation CTA with popup" loading="lazy"></iframe></section>
+  </main>
+
+  <p class="preview-status">Служебное превью блоков «Чемпион LED»</p>
+
+  <script>
+    (() => {
+      const frames = document.querySelectorAll('.preview-block iframe');
+
+      const fit = (frame) => {
+        try {
+          const doc = frame.contentDocument;
+          if (!doc) return;
+          doc.documentElement.style.overflow = 'hidden';
+          doc.body.style.margin = '0';
+          const height = Math.max(doc.documentElement.scrollHeight, doc.body.scrollHeight);
+          if (height > 0) frame.style.height = `${height}px`;
+        } catch (_) {}
+      };
+
+      frames.forEach((frame) => {
+        frame.addEventListener('load', () => {
+          fit(frame);
+          try {
+            const observer = new ResizeObserver(() => fit(frame));
+            observer.observe(frame.contentDocument.documentElement);
+          } catch (_) {}
+        });
+      });
+
+      window.addEventListener('resize', () => frames.forEach(fit), { passive: true });
+    })();
+  </script>
+</body>
+</html>
