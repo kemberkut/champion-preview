@@ -75,9 +75,20 @@
         backdrop-filter: blur(5.86px);
       }
 
-      .clb-k8v3x9 .hero__offer { display: contents; }
+      .clb-k8v3x9 .hero__offer {
+        position: absolute;
+        right: 30.232px;
+        bottom: 42.433px;
+        left: 30.232px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
 
-      .clb-k8v3x9 .hero__content { position: absolute; top: 125.179px; left: 30.232px; }
+      .clb-k8v3x9 .hero__content {
+        position: static;
+        width: 100%;
+      }
 
       .clb-k8v3x9 .hero__title {
         width: 374px;
@@ -137,12 +148,12 @@
       .clb-k8v3x9 .button--secondary-dark { width: 133.827px; border: 1px solid #fff; background: transparent; font-size: 10.944px; }
       .clb-k8v3x9 .button--secondary-dark:hover { background: rgba(255, 255, 255, .12); }
 
-      .clb-k8v3x9 .hero__signature { position: absolute; top: 446.607px; left: 31.358px; }
+      .clb-k8v3x9 .hero__signature { position: static; margin-top: 24px; }
       .clb-k8v3x9 .hero__signature-label { display: flex; width: 150.841px; align-items: center; gap: 5px; margin-bottom: 4px; font-size: 8.85px; line-height: 1.2; white-space: nowrap; }
       .clb-k8v3x9 .hero__signature-label i { display: block; width: 86.654px; border-top: .516px solid #fff; }
       .clb-k8v3x9 .hero__signature img { display: block; width: 149.582px; height: auto; }
 
-      .clb-k8v3x9 .hero__benefits { position: absolute; top: 495.498px; left: 32.152px; display: flex; gap: 4.37px; width: 397.714px; margin: 0; padding: 0; list-style: none; }
+      .clb-k8v3x9 .hero__benefits { position: static; display: flex; gap: 4.37px; width: 397.714px; margin: 17px 0 0; padding: 0; list-style: none; }
       .clb-k8v3x9 .hero__benefits li { display: flex; height: 22.73px; flex: 0 0 auto; align-items: center; justify-content: center; gap: 5.11px; border: .437px solid #f7ffff; border-radius: 5.244px; font-size: 9.615px; font-weight: 500; line-height: 1.2; white-space: nowrap; }
       .clb-k8v3x9 .hero__benefits li:nth-child(1) { width: 89.718px; }
       .clb-k8v3x9 .hero__benefits li:nth-child(2) { width: 83.701px; }
@@ -231,7 +242,6 @@
         }
 
         .clb-k8v3x9 .hero__signature {
-          position: static;
           margin-top: 29px;
         }
 
@@ -245,7 +255,6 @@
         }
 
         .clb-k8v3x9 .hero__benefits {
-          position: static;
           width: max-content;
           max-width: 100%;
           margin-top: 16px;
