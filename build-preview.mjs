@@ -10,7 +10,6 @@ const blocks = [
   ["catalog-cta", "Catalog CTA"],
   ["consultation-cta", "Consultation CTA"],
   ["client-mounting-benefits", "Client benefits"],
-  ["consultation-cta-popup", "CTA + popup"],
 ];
 
 const fragments = [];
