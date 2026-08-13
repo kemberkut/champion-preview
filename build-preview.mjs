@@ -69,6 +69,7 @@ const page = `<!doctype html>
       text-decoration: none;
     }
     .preview-block { width: 100%; margin: 0; overflow: visible; background: #fff; }
+    .preview-block + .preview-block { margin-top: 100px; }
     .preview-block > section { margin-inline: auto; }
   </style>
 </head>
