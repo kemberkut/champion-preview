@@ -202,6 +202,27 @@
       .clb-t4k8s2 #clb-t4k8s2-tab-3:checked ~ .mounting-switcher__panels .mounting-switcher__panel--3,
       .clb-t4k8s2 #clb-t4k8s2-tab-4:checked ~ .mounting-switcher__panels .mounting-switcher__panel--4 {
         display: block;
+        animation: clb-t4k8s2-panel-in 1s cubic-bezier(.2, .7, .2, 1) both;
+      }
+
+      @keyframes clb-t4k8s2-panel-in {
+        0% {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .clb-t4k8s2 .mounting-switcher__panel .mounting-switcher__media img {
+        animation: clb-t4k8s2-image-in 1s cubic-bezier(.2, .7, .2, 1) both;
+      }
+
+      @keyframes clb-t4k8s2-image-in {
+        0% { transform: scale(1.035); }
+        100% { transform: scale(1); }
       }
 
       .clb-t4k8s2 .mounting-switcher__media { position: relative; overflow: hidden; border-radius: 9.086px; }
@@ -250,6 +271,8 @@
 
       @media (prefers-reduced-motion: reduce) {
         .clb-t4k8s2 .button { transition: none; }
+        .clb-t4k8s2 .mounting-switcher__panel,
+        .clb-t4k8s2 .mounting-switcher__panel .mounting-switcher__media img { animation: none !important; }
       }
     </style>
 
