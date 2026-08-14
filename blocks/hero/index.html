@@ -68,7 +68,7 @@
 
       .clb-k8v3x9 .hero__panel {
         position: absolute;
-        inset: 0 auto 0 max(0px, calc((100vw - 1280px) / 2 + 216px));
+        inset: 0 auto 0 clamp(32px, 16.875vw, 216px);
         width: min(470.744px, 52vw);
         background: rgba(11, 11, 11, .67);
         -webkit-backdrop-filter: blur(5.86px);
@@ -77,12 +77,14 @@
 
       .clb-k8v3x9 .hero__offer {
         position: absolute;
+        top: 50%;
         right: 30.232px;
-        bottom: 42.433px;
+        bottom: auto;
         left: 30.232px;
         display: flex;
         flex-direction: column;
         align-items: stretch;
+        transform: translateY(-50%);
       }
 
       .clb-k8v3x9 .hero__content {
@@ -179,7 +181,6 @@
 
         .clb-k8v3x9 .hero__offer {
           right: clamp(30.232px, 2.36vw, 45px);
-          bottom: clamp(42.433px, 3.31vw, 63px);
           left: clamp(30.232px, 2.36vw, 45px);
         }
 
@@ -231,12 +232,14 @@
 
         .clb-k8v3x9 .hero__offer {
           position: absolute;
+          top: auto;
           right: 25px;
           bottom: 40px;
           left: 35px;
           display: flex;
           flex-direction: column;
           align-items: stretch;
+          transform: none;
         }
 
         .clb-k8v3x9 .hero__content {
