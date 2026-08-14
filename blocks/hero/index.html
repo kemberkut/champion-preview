@@ -195,26 +195,26 @@
         }
 
         .clb-k8v3x9 .hero__benefits {
+          display: grid;
           width: 100%;
-          gap: clamp(4.37px, .31vw, 6px);
-          margin-top: clamp(17px, 1.16vw, 22px);
+          grid-template-columns: 1fr .95fr 1.25fr 1.1fr;
+          gap: clamp(4.37px, calc(4.37px + (100vw - 1200px) * .00233), 6px);
+          margin-top: clamp(17px, calc(17px + (100vw - 1200px) * .00714), 22px);
         }
 
         .clb-k8v3x9 .hero__benefits li {
-          height: clamp(22.73px, 1.64vw, 31px);
-          gap: clamp(5.11px, .36vw, 7px);
-          border-radius: clamp(5.244px, .37vw, 7px);
-          font-size: clamp(9.615px, .66vw, 12.5px);
+          width: 100%;
+          height: clamp(22.73px, calc(22.73px + (100vw - 1200px) * .01181), 31px);
+          gap: clamp(5.11px, calc(5.11px + (100vw - 1200px) * .0027), 7px);
+          border-radius: clamp(5.244px, calc(5.244px + (100vw - 1200px) * .00251), 7px);
+          font-size: clamp(9.615px, calc(9.615px + (100vw - 1200px) * .00412), 12.5px);
         }
 
-        .clb-k8v3x9 .hero__benefits li:nth-child(1) { width: clamp(89.718px, 6.37vw, 121px); }
-        .clb-k8v3x9 .hero__benefits li:nth-child(2) { width: clamp(83.701px, 5.95vw, 113px); }
-        .clb-k8v3x9 .hero__benefits li:nth-child(3) { width: clamp(112.393px, 8vw, 152px); }
-        .clb-k8v3x9 .hero__benefits li:nth-child(4) { width: clamp(98.79px, 7vw, 133px); }
+        .clb-k8v3x9 .hero__benefits li:nth-child(n) { width: 100%; }
 
         .clb-k8v3x9 .hero__benefits img {
-          max-width: clamp(10.24px, .73vw, 14px);
-          max-height: clamp(10.24px, .73vw, 14px);
+          max-width: clamp(10.24px, calc(10.24px + (100vw - 1200px) * .00537), 14px);
+          max-height: clamp(10.24px, calc(10.24px + (100vw - 1200px) * .00537), 14px);
         }
       }
 
