@@ -6,6 +6,7 @@ const root = dirname(fileURLToPath(import.meta.url));
 const blocks = [
   ["hero", "Hero"],
   ["brand-intro", "Brand intro"],
+  ["brand-intro-full", "Brand intro full"],
   ["track-mounting-switcher", "CSS switcher"],
   ["benefits", "Benefits"],
   ["catalog-cta", "Catalog CTA"],
