@@ -162,6 +162,24 @@
         .clb-f8r2y5 .brand-intro__lead { font-size: 14.965px; }
       }
 
+      @media (min-width: 761px) and (max-width: 1100px) {
+        .clb-f8r2y5 .brand-intro__inner {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 32px;
+        }
+
+        .clb-f8r2y5 .brand-intro__media {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+        }
+
+        .clb-f8r2y5 .brand-intro__content {
+          max-width: none;
+        }
+      }
+
       @media (max-width: 760px) {
         .clb-f8r2y5 { --space-title-to-lead: 24px; --space-lead-to-actions: 28px; }
         .clb-f8r2y5 .brand-intro { padding: 24px; }
